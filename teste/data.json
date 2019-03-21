@@ -1,0 +1,52 @@
+{
+  "Assets": {
+    "Teste": {
+      "Assets": {},
+      "Attributes": {
+        "CommitID": "",
+        "CommitDate": null,
+        "BuildDate": null,
+        "HomePage": "",
+        "Hash": ""
+      }
+    },
+    "Teste2": {
+      "Assets": {
+        "A": {
+          "Assets": {},
+          "Attributes": {
+            "CommitID": "",
+            "CommitDate": null,
+            "BuildDate": null,
+            "HomePage": "",
+            "Hash": ""
+          }
+        },
+        "B": {
+          "Assets": {},
+          "Attributes": {
+            "CommitID": "",
+            "CommitDate": null,
+            "BuildDate": null,
+            "HomePage": "",
+            "Hash": ""
+          }
+        }
+      },
+      "Attributes": {
+        "CommitID": "",
+        "CommitDate": null,
+        "BuildDate": null,
+        "HomePage": "",
+        "Hash": ""
+      }
+    }
+  },
+  "Attributes": {
+    "CommitID": "",
+    "CommitDate": null,
+    "BuildDate": null,
+    "HomePage": "",
+    "Hash": ""
+  }
+}
