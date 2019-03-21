@@ -1,2 +1,2 @@
 # version
-Provide version command and helpers for github.com/aghape/aghape application
+Provide version command and helpers for github.com/ecletus/ecletus application

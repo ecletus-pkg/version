@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/aghape-pkg/version"
+	"github.com/ecletus-pkg/version"
 )
 
 func main() {

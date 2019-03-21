@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aghape/cli"
-	"github.com/aghape/plug"
+	"github.com/ecletus/cli"
+	"github.com/ecletus/plug"
 	"github.com/spf13/cobra"
 )
 
