@@ -208,6 +208,7 @@ func (vs Versions) MarshalJSON() ([]byte, error) {
 }
 
 func (p *Plugin) OnRegister() {
+	return
 	cli.OnRegister(p, func(e *cli.RegisterEvent) {
 		dis := e.PluginDispatcher()
 		version := &cobra.Command{
