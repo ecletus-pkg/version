@@ -4,9 +4,14 @@ import (
 	"bytes"
 	"encoding/json"
 	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 	"time"
+
+	"encoding/base64"
+
+	"crypto/sha1"
 
 	"github.com/ecletus/cli"
 	"github.com/ecletus/plug"
@@ -246,3 +251,29 @@ func (p *Plugin) OnRegister() {
 		e.RootCmd.AddCommand(version)
 	})
 }
+
+func SetEnv(v Version) {
+	b, _ := v.MarshalJSON()
+	os.Setenv(envName, base64.RawURLEncoding.EncodeToString(b))
+}
+
+func FromEnv() *Version {
+	s := os.Getenv(envName)
+	if s == "" {
+		return nil
+	}
+	b, err := base64.RawURLEncoding.DecodeString(s)
+	if err != nil {
+		panic(err)
+	}
+	v := &Version{}
+	if err = json.Unmarshal(b, v); err != nil {
+		panic(err)
+	}
+	return v
+}
+
+var envName = func() string {
+	s := sha1.Sum([]byte(filepath.Base(os.Args[0])))
+	return "github_com__ecletus_pkg__version__" + string(s[:])
+}()
